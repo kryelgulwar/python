@@ -376,6 +376,9 @@ print(newlist)
 ['voilet', 'green', 'indigo', 'blue']
 ['voilet', 'green', 'indigo', 'blue']
 ```
+## Add List items
+These are the ways to add any item in list
+
 ## append():
 This method appends items to the end of the existing list.
 
@@ -422,6 +425,18 @@ print(colors)
 ```
 ['voilet', 'indigo', 'blue', 'green', 'yellow', 'orange', 'red']
  ```
+#### Example 2:
+```python
+thislist = ["apple", "banana", "cherry"]
+thistuple = ("kiwi", "orange")
+thislist.extend(thistuple)
+print(thislist))
+```
+#### Output:
+```
+['apple', 'banana', 'cherry', 'kiwi', 'orange']
+ ```
+
 ## Concatenating two lists:
 You can simply concatenate two lists to join two lists.
 
@@ -434,4 +449,83 @@ print(colors + colors2)
 #### Output:
 ```
 ['voilet', 'indigo', 'blue', 'green', 'yellow', 'orange', 'red']
+```
+## Remove List items
+These are the methods to remove any item in list
+
+## remove()
+The remove() method removes the specified item.
+
+#### Example 1:
+```python
+thislist = ["apple", "banana", "cherry"]
+thislist.remove("banana")
+print(thislist)
+```
+#### Output:
+```
+['apple', 'cherry']
+```
+If there are more than one item with the specified value, the remove() method removes the first occurrence:
+#### Example 2:
+```python
+thislist = ["apple", "banana", "cherry", "banana", "kiwi"]
+thislist.remove("banana")
+print(thislist)
+```
+#### Output:
+```
+['apple', 'cherry', 'banana', 'kiwi']
+```
+
+## pop()
+The pop() method removes the specified index.
+If you do not specify the index, the pop() method removes the last item.
+
+#### Example 1:
+```python
+thislist = ["apple", "banana", "cherry"]
+thislist.pop(1)
+print(thislist)
+```
+#### Output:
+```
+['apple', 'cherry']
+```
+
+#### Example 2:
+```python
+thislist = ["apple", "banana", "cherry"]
+thislist.pop()
+print(thislist)
+```
+#### Output:
+```
+['apple', 'banana']
+```
+
+## clear()
+The clear() method empties the list.
+#### Example :
+```python
+thislist = ["apple", "banana", "cherry"]
+thislist.clear()
+print(thislist)
+```
+#### Output:
+```
+[]
+```
+
+## del
+The del keyword can also delete the list completely.
+#### Example :
+```python
+thislist = ["apple", "banana", "cherry"]
+del thislist
+print(thislist) #this will cause an error because you have succsesfully deleted "thislist".
+```
+#### Output:
+```
+NameError: name 'thislist' is not defined
 ```
