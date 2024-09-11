@@ -228,6 +228,7 @@ print(namesWith_O)
 # List Methods
 ## list.sort()
 This method sorts the list in ascending order. The original list is updated
+the sort() method modifies the list in place and does not return anything.
 ### Example 1:
 ```python
 colors = ["voilet", "indigo", "blue", "green"]
@@ -244,6 +245,47 @@ print(num)
 [1, 1, 2, 2, 2, 3, 4, 5, 6, 7, 8, 9]
  
 ```
+
+### Example 2:
+```python
+colors = ["voilet", "indigo", "blue", "green"]
+print(colors.sort())
+colors = colors.sort()
+print(colors)
+```
+### Output:
+```
+None
+None
+ 
+```
+The reason for the None output in your original code is that the sort() method modifies the list in place and does not return anything. In Python, in-place operations like sort() return None to avoid confusion, as they directly change the list's order without creating a new list.
+Mistake: Assigning sort() Result
+When you assign animals = animals.sort(), what you're doing is assigning None (the return value of sort()) to animals, which is why printing animals afterwards results in None.
+
+Correct Usage:
+Use animals.sort() to sort the list in place, without assignment.
+Use sorted(animals) if you want a new, sorted version of the list without altering the original.
+
+### Example :
+```python
+# Sorting in place (modifies original list)
+animals = ["cat", "dog", "bat", "mouse"]
+animals.sort()
+print(animals)  # ['bat', 'cat', 'dog', 'mouse']
+
+# Attempting to assign the result of sort() (returns None)
+animals = ["cat", "dog", "bat", "mouse"]
+sorted_list = animals.sort()  # sorted_list will be None
+print(sorted_list)  # None
+
+# Using sorted() to get a new sorted list
+animals = ["cat", "dog", "bat", "mouse"]
+sorted_animals = sorted(animals)  # Returns a new sorted list
+print(sorted_animals)  # ['bat', 'cat', 'dog', 'mouse']
+
+```
+
 What if you want to print the list in descending order?\
 We must give reverse=True as a parameter in the sort method.
 
