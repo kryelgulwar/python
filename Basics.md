@@ -220,85 +220,119 @@ print(type(a))
 b = "1"
 print(type(b))
 ```
-By default, python provides the following built-in data types:
+By default, python provides the following built-in data types, in these categories:
 
-## 1. Numeric data: int, float, complex
-
-
- - int: 3, -8, 0
- -    float: 7.349, -9.0, 0.0000001
- -  complex: 6 + 2i 
-
- ## 2. Text data: str
-    
-
-str: "Hello World!!!", "Python Programming"
-
-## 3. Boolean data:
-    
-
-Boolean data consists of values True or False.
-
-## 4. Sequenced data: list, tuple
-    
-
-**list:**  A list is an ordered collection of data with elements separated by a comma and enclosed within square brackets. Lists are mutable and can be modified after creation.
-
-**Example:**
-
-```python
-list1 = [8, 2.3, [-4, 5], ["apple", "banana"]]
-print(list1)
-```
+Text Type:	str
+Numeric Types:	int, float, complex
+Sequence Types:	list, tuple, range
+Mapping Type:	dict
+Set Types:	set, frozenset
+Boolean Type:	bool
+Binary Types:	bytes, bytearray, memoryview
+None Type:	NoneType
 
 
-Output:
 
-```markup
-[8, 2.3, [-4, 5], ['apple', 'banana']]
-```
+## 1. Text Type: str
+str: The str (string) data type is used to represent textual data. A string is a sequence of characters, and it is immutable, meaning once a string is created,    it cannot be modified.
+ ```python
+ my_string = "Hello, World!"
+ ```
+
+## 2. Numeric Types: int, float, complex
+
+1. int: Represents whole numbers, both positive and negative, without decimals. Integers have unlimited precision in Python.
+ ```python
+ num = 42
+ ```
+2. float: Represents floating-point numbers (decimal numbers). These are used for real numbers with fractions.
+ ```python
+ pi = 3.14159
+ ```
+3. complex: Represents complex numbers, which have a real and an imaginary part. The imaginary part is denoted by a j.
+ ```python
+ complex_num = 3 + 5j
+ ```
+
+## 3. Sequence Types: list, tuple, range
+
+1. list: An ordered, mutable collection of elements. Lists can hold elements of any type and can be modified after creation.
+ ```python
+ num = 42
+ ```
+2. tuple: Similar to a list, but it is immutable. Once a tuple is created, you cannot change its elements.
+ ```python
+ pi = 3.14159
+ ```
+3. range: Represents a sequence of numbers, often used in loops. It generates numbers on demand and is immutable.
+ ```python
+ numbers = range(1, 10, 2) #range(from, to, intervel)
+ ```
+
+## 4. Mapping Type: dict
+
+dict: A dictionary is a collection of key-value pairs. Each key must be unique, and it maps to a value. Dictionaries are mutable.
+ ```python
+ my_dict = {"name": "Alice", "age": 25}
+ ```
+
+## 5. Set Types: set, frozenset
+
+1. set: An unordered collection of unique elements. It is mutable, meaning elements can be added or removed, but duplicates are not allowed.    
+ ```python
+ my_set = {1, 2, 3, 4}
+ ```
+
+2. frozenset: Similar to a set, but it is immutable. Once created, you cannot modify the elements of a frozenset.
+ ```python
+ my_frozenset = frozenset([1, 2, 3])
+ ```
+
+## 6. Boolean Type: bool
+
+bool: Represents a logical value of either True or False. It is commonly used in conditional statements.
+ ```python
+ is_valid = True
+ ```
+
+## 7. Binary Types:
+
+1. bytes: An immutable sequence of bytes (8-bit values), used to represent binary data like files, images, etc.
+ ```python
+ my_bytes = b"hello"
+ ```
+2. bytearray: A mutable version of bytes. You can modify the elements of a bytearray.
+ ```python
+ my_bytearray = bytearray(b"hello")
+ my_bytearray[0] = 72
+ ```
+3. memoryview: Provides memory-efficient access to the internal data of an object, without copying it.
+ ```python
+ my_memoryview = memoryview(b"hello")
+ ```
+
+## 8. None Type:
+
+NoneType: Represents the absence of a value. It is the return type of functions that do not explicitly return anything. It is used to signify "nothing" or "no 
+  value."
+ ```python
+ result = None
+ ```
+These types are fundamental building blocks of Python, used to store and manipulate various kinds of data efficiently.
 
 
-**Tuple:**  A tuple is an ordered collection of data with elements separated by a comma and enclosed within parentheses. Tuples are immutable and can not be modified after creation. 
+## Operators
+Python has different types of operators for different operations. 
 
-**Example:**
+1. Arithmetic operators
+2. Assignment operators
+3. Comparison operators
+4. Logical operators
+5. Identity operators
+6. Membership operators
+7. Bitwise operators
 
-```python
-tuple1 = (("parrot", "sparrow"), ("Lion", "Tiger"))
-print(tuple1)
-```
-
-
-Output:
-
-```python
-(('parrot', 'sparrow'), ('Lion', 'Tiger'))
-```
-
-
-## 5. Mapped data: dict
-    
-
-**dict:** A dictionary is an unordered collection of data containing a key:value pair. The key:value pairs are enclosed within curly brackets.
-
-**Example:**
-
-```python
-dict1 = {"name":"Sakshi", "age":20, "canVote":True}
-print(dict1)
-```
-
-
-Output:
-
-```python
-{'name': 'Sakshi', 'age': 20, 'canVote': True}
-```
-
-# Operators
-Python has different types of operators for different operations. To create a calculator we require arithmetic operators.
-# Arithmetic operators
-
+## Arithmetic operators
 
 |   Operator             |Operator Name                          |Example                         |
 |----------------|-------------------------------|-----------------------------|
@@ -329,6 +363,276 @@ print("Floor Division of",n,"and",m,"is", ans6)
 ```
 # Explaination
 Here 'n' and 'm' are two variables in which the integer value is being stored. Variables 'ans1' , 'ans2' ,'ans3', 'ans4','ans5' and 'ans6' contains the outputs corresponding to addition, subtraction,multiplication, division, modulus and floor division respectively.
+
+## Python Assignment Operators
+Assignment operators are used to assign values to variables:
+
+| Operator | Example 1 | Equivalent Expression |
+|----------|-----------|-----------------------|
+| `=`      | `x = 5`   | `x = 5`               |
+| `+=`     | `x += 3`  | `x = x + 3`           |
+| `-=`     | `x -= 3`  | `x = x - 3`           |
+| `*=`     | `x *= 3`  | `x = x * 3`           |
+| `/=`     | `x /= 3`  | `x = x / 3`           |
+| `%=`     | `x %= 3`  | `x = x % 3`           |
+| `//=`    | `x //= 3` | `x = x // 3`          |
+| `**=`    | `x **= 3` | `x = x ** 3`          |
+| `&=`     | `x &= 3`  | `x = x & 3`           |
+| `|=`     | `x |= 3`  | `x = x | 3`           |
+| `^=`     | `x ^= 3`  | `x = x ^ 3`           |
+| `>>=`    | `x >>= 3` | `x = x >> 3`          |
+| `<<=`    | `x <<= 3` | `x = x << 3`          |
+| `:=`     | `print(x := 3)` | `x = 3`<br>`print(x)` |
+
+Examples with Code and Output:
+
+```python
+x = 5
+print(x)  # Output: 5
+
+x = 5
+x += 3
+print(x)  # Output: 8
+
+x = 5
+x -= 3
+print(x)  # Output: 2
+
+x = 5
+x *= 3
+print(x)  # Output: 15
+
+x = 9
+x /= 3
+print(x)  # Output: 3.0
+
+x = 10
+x %= 3
+print(x)  # Output: 1
+
+x = 10
+x //= 3
+print(x)  # Output: 3
+
+x = 2
+x **= 3
+print(x)  # Output: 8
+
+x = 5  # 101 in binary
+x &= 3  # 011 in binary
+print(x)  # Output: 1 (binary AND operation)
+
+x = 5  # 101 in binary
+x |= 3  # 011 in binary
+print(x)  # Output: 7 (binary OR operation)
+
+x = 5  # 101 in binary
+x ^= 3  # 011 in binary
+print(x)  # Output: 6 (binary XOR operation)
+
+x = 16  # 10000 in binary
+x >>= 3
+print(x)  # Output: 2 (binary right shift by 3 bits)
+
+x = 3  # 11 in binary
+x <<= 2
+print(x)  # Output: 12 (binary left shift by 2 bits)
+
+print(x := 3)  # Output: 3
+print(x)       # Output: 3
+```
+
+## Python Comparison Operators
+Comparison operators are used to compare two values:
+
+| Operator | Name                         | Example    |
+|----------|------------------------------|------------|
+| `==`     | Equal                        | `x == y`   |
+| `!=`     | Not equal                    | `x != y`   |
+| `>`      | Greater than                 | `x > y`    |
+| `<`      | Less than                    | `x < y`    |
+| `>=`     | Greater than or equal to     | `x >= y`   |
+| `<=`     | Less than or equal to        | `x <= y`   |
+
+## Python Logical Operators
+Logical operators are used to combine conditional statements:
+
+| Operator | Description                                      | Example                       |
+|----------|--------------------------------------------------|-------------------------------|
+| `and`    | Returns True if both statements are true         | `x < 5 and x < 10`            |
+| `or`     | Returns True if one of the statements is true    | `x < 5 or x < 4`              |
+| `not`    | Reverses the result, returns False if the result is true | `not(x < 5 and x < 10)`  |
+
+Example Code:
+```python
+# Logical Operators Example
+
+x = 3
+y = 7
+
+# and operator: True if both conditions are true
+result_and = (x < 5 and x < 10)  # True
+print(f"and result: {result_and}")
+
+# or operator: True if at least one condition is true
+result_or = (x < 5 or x < 4)  # True
+print(f"or result: {result_or}")
+
+# not operator: Reverses the result
+result_not = not(x < 5 and y < 10)  # False
+print(f"not result: {result_not}")
+```
+
+## Python Identity Operators
+Identity operators are used to compare the objects, not if they are equal, but if they are actually the same object, with the same memory location:
+
+| Operator  | Description                                          | Example          |
+|-----------|------------------------------------------------------|------------------|
+| `is`      | Returns True if both variables are the same object   | `x is y`         |
+| `is not`  | Returns True if both variables are not the same object | `x is not y`   |
+
+Example Code:
+```python
+# Identity Operators Example
+
+x = [1, 2, 3]
+y = [1, 2, 3]
+z = x
+
+# is operator: True if both variables point to the same object
+result_is = (x is z)  # True, because z is the same object as x
+print(f"is result: {result_is}")
+
+# is operator: False if both variables point to different objects
+result_is_false = (x is y)  # False, because y is a different object with the same values
+print(f"is result (different object): {result_is_false}")
+
+# is not operator: True if both variables do not point to the same object
+result_is_not = (x is not y)  # True, because x and y are different objects
+print(f"is not result: {result_is_not}")
+````
+```output
+is result: True
+is result (different object): False
+is not result: True
+```
+
+## Python Membership Operators
+Membership operators are used to test if a sequence is presented in an object:
+
+| Operator  | Description                                                                 | Example     |
+|-----------|-----------------------------------------------------------------------------|-------------|
+| `in`      | Returns True if a sequence with the specified value is present in the object | `x in y`    |
+| `not in`  | Returns True if a sequence with the specified value is not present in the object | `x not in y` |
+
+Example Code:
+
+```python
+# Membership Operators Example
+
+x = 2
+y = [1, 2, 3, 4, 5]
+
+# 'in' operator: Returns True if x is found in y
+result_in = (x in y)  # True, because 2 is in the list y
+print(f"in result: {result_in}")
+
+# 'not in' operator: Returns True if x is not found in y
+result_not_in = (6 not in y)  # True, because 6 is not in the list y
+print(f"not in result: {result_not_in}")
+```
+
+```output
+in result: True
+not in result: True
+```
+
+## Python Bitwise Operators
+Bitwise operators are used to compare (binary) numbers:
+
+| Operator | Name                  | Description                                                                              | Example    |
+|----------|-----------------------|------------------------------------------------------------------------------------------|------------|
+| `&`      | AND                   | Sets each bit to 1 if both bits are 1                                                     | `x & y`    |
+| `|`      | OR                    | Sets each bit to 1 if one of two bits is 1                                                | `x | y`    |
+| `^`      | XOR                   | Sets each bit to 1 if only one of two bits is 1                                           | `x ^ y`    |
+| `~`      | NOT                   | Inverts all the bits                                                                      | `~x`       |
+| `<<`     | Zero fill left shift   | Shift left by pushing zeros in from the right and let the leftmost bits fall off          | `x << 2`   |
+| `>>`     | Signed right shift     | Shift right by pushing copies of the leftmost bit in from the left, and let the rightmost bits fall off | `x >> 2`   |
+
+## Example Code:
+
+```python
+# Bitwise Operators Example
+
+x = 10  # binary: 1010
+y = 4   # binary: 0100
+
+# AND operator: Sets each bit to 1 if both bits are 1
+result_and = x & y  # binary: 0000, decimal: 0
+print(f"x & y = {result_and}")
+
+# OR operator: Sets each bit to 1 if one of two bits is 1
+result_or = x | y  # binary: 1110, decimal: 14
+print(f"x | y = {result_or}")
+
+# XOR operator: Sets each bit to 1 if only one of two bits is 1
+result_xor = x ^ y  # binary: 1110, decimal: 14
+print(f"x ^ y = {result_xor}")
+
+# NOT operator: Inverts all the bits
+result_not = ~x  # binary: -1011, decimal: -11 (2's complement)
+print(f"~x = {result_not}")
+
+# Left Shift operator: Shift left by pushing zeros in from the right
+result_left_shift = x << 2  # binary: 101000, decimal: 40
+print(f"x << 2 = {result_left_shift}")
+
+# Right Shift operator: Shift right by pushing copies of the leftmost bit in from the left
+result_right_shift = x >> 2  # binary: 0010, decimal: 2
+print(f"x >> 2 = {result_right_shift}")
+```
+```output
+x & y = 0
+x | y = 14
+x ^ y = 14
+~x = -11
+x << 2 = 40
+x >> 2 = 2
+```
+## Operator precedence
+The precedence order is described in the table below, starting with the highest precedence at the top:
+
+| Operator      | Description                                 |
+|---------------|---------------------------------------------|
+| `()`          | Parentheses: Grouping expressions           |
+| `**`          | Exponentiation                              |
+| `+x` `-x` `~x`| Unary plus, unary minus, bitwise NOT        |
+| `*` `/` `//` `%`| Multiplication, division, floor division, modulus |
+| `+` `-`       | Addition and subtraction                    |
+| `<<` `>>`     | Bitwise left shift, bitwise right shift     |
+| `&`           | Bitwise AND                                 |
+| `^`           | Bitwise XOR                                 |
+| `|`           | Bitwise OR                                  |
+| `==` `!=` `>` `>=` `<` `<=` | Comparisons: equal to, not equal to, greater than, greater than or equal to, less than, less than or equal to |
+| `is` `is not` | Identity (checks if two variables point to the same object), Not identity |
+| `in` `not in` | Membership (checks if a value is present in a sequence), Not membership |
+| `not`         | Logical NOT                                 |
+| `and`         | Logical AND                                 |
+| `or`          | Logical OR                                  |
+
+
+Parentheses has the highest precedence, meaning that expressions inside parentheses must be evaluated first:
+Example
+```python
+print((6 + 3) - (6 + 3))
+```
+
+If two operators have the same precedence, the expression is evaluated from left to right.
+Example
+Addition + and subtraction - has the same precedence, and therefor we evaluate the expression from left to right:
+```python
+print(5 + 4 - 7 + 3)
+```
 
 # Typecasting in python
 The conversion of one data type into the other data type is known as type casting in python or type conversion in python.
