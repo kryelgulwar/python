@@ -222,14 +222,14 @@ print(type(b))
 ```
 By default, python provides the following built-in data types, in these categories:
 
-Text Type:	str
-Numeric Types:	int, float, complex
-Sequence Types:	list, tuple, range
-Mapping Type:	dict
-Set Types:	set, frozenset
-Boolean Type:	bool
-Binary Types:	bytes, bytearray, memoryview
-None Type:	NoneType
+1. Text Type:	```str```
+2. Numeric Types:	```int```, ```float```, ```complex```
+3. Sequence Types:	```list```, ```tuple```, ```range```
+4. Mapping Type:	```dict```
+5. Set Types:	```set```, ```frozenset```
+6. Boolean Type:	```bool```
+7. Binary Types:	```bytes```, ```bytearray```, ```memoryview```
+8. None Type:	```None```
 
 
 
