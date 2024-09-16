@@ -213,7 +213,7 @@ These are four variables of different data types.
 
 ## What is a Data Type?
 Data type specifies the type of value a variable holds. This is required in programming to do various operations without causing an error. \
-In python, we can print the type of any operator using type function:
+In python, we can print the type of any data that variable holds using type function:
 ```python
 a = 1
 print(type(a))
